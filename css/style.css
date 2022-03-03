@@ -1,0 +1,482 @@
+/* -------------------------- Start Global Rules --------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-corner {
+  background-color: var(--main-color);
+  border-radius: 10px;
+}
+/* ------------------------ End Global Rules ------------------------- */
+/* ------------------------ Start variables -------------------------- */
+:root {
+  --section-padding: 60px;
+  --main-color: #10cab7;
+  --secondary-color: #eee;
+  --section-background: #f6f6f6;
+  --transition: 0.5s;
+}
+/* ----------------------------- End variables ---------------------- */
+/* ----------------------- Project's sections' Table ------------------  
+Project's sections' Table:
+1 >> Header 
+2 >> Landing 
+3 >> Features
+4 >> Services  
+5 >> Portfolio  
+6 >> About  
+7 >> Contact  
+8 >> Footer  
+
+-------------------------- Project's sections' Table ---------------- */
+/* ------------------------------ Start Header ---------------------- */
+header {
+  background-color: var(--section-background);
+  border-bottom: 1px solid #0b0a0a;
+  position: fixed;
+  width: 100vw;
+  z-index: 2;
+}
+header nav {
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+}
+header .icon {
+  display: none;
+  cursor: pointer;
+}
+header .icon div {
+  height: 3px;
+  width: 25px;
+  margin: 5px;
+  background-color: #000;
+}
+header .icon .line2 {
+  width: 15px;
+  transition: var(--transition);
+}
+header .icon:hover .line2 {
+  width: 25px;
+}
+header .nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+header .nav-links li {
+  padding: 10px;
+  border-radius: 5px;
+}
+header .nav-links a {
+  color: #0b0a0a;
+  font-weight: bold;
+  font-size: 17px;
+  letter-spacing: 2px;
+  transition: var(--transition);
+}
+header .nav-links a:hover {
+  color: var(--main-color);
+  transition: var(--transition);
+}
+/* ---------------------- End Header ---------------------- */
+/* --------------------- Start Landing -------------------- */
+.landing {
+  background-image: url("../images/landing.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+.intro-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 40%;
+  text-align: center;
+}
+.intro-text h1 {
+  font-weight: bolder;
+  font-size: 50px;
+  color: var(--main-color);
+}
+.intro-text p {
+  font-size: 19px;
+  line-height: 1.8;
+}
+/* ---------------------- End Landing --------------------- */
+/* --------------------- Start Features ------------------- */
+.Features {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-background);
+}
+.Features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  text-align: center;
+}
+.Features .col-1,
+.col-2,
+.col-3 {
+  padding: 20px;
+}
+.Features i {
+  color: var(--main-color);
+}
+.Features .container .text {
+  margin-left: 20px;
+}
+.Features .container h3 {
+  font-weight: 800;
+  margin: 20px 0;
+}
+.Features .container p {
+  line-height: 1.8;
+  color: #777;
+  font-size: 17px;
+}
+/* ---------------------- End Features -------------------- */
+/* --------------------- Start Services ------------------- */
+.services {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  position: relative;
+}
+.section-heading h1 {
+  color: #ebeced;
+  font-size: 100px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -3px;
+  margin: 0;
+}
+.section-heading p {
+  margin-top: -30px;
+  font-size: 20px;
+  text-align: center;
+  color: #797979;
+}
+.service-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin-top: 100px;
+}
+.service-content .srv {
+  display: flex;
+  justify-content: space-between;
+}
+.service-content .srv i {
+  color: var(--main-color);
+  padding-right: 25px;
+}
+.service-content .srv .text h3 {
+  margin-bottom: 20px;
+}
+.service-content .srv .text p {
+  color: #797979;
+  line-height: 1.5;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.service-content .col img {
+  position: relative;
+}
+.services .image::before {
+  content: "";
+  background-color: var(--secondary-color);
+  width: 100px;
+  height: calc(100% + 100px);
+  top: -50px;
+  position: absolute;
+  right: 0;
+  z-index: 5;
+}
+.service-content a i {
+  position: absolute;
+  color: white;
+  right: 30px;
+  padding: 20px;
+  border-radius: 40%;
+  background-color: #10cab7;
+}
+.scroll-up {
+  color: #fff;
+  height: 40px;
+  width: 40px;
+  right: 20px;
+  bottom: 20px;
+  border: none;
+  display: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: fixed;
+  background-color: var(--main-color);
+}
+/* ---------------------- End Services -------------------- */
+/* --------------------- Start Portfolio ------------------ */
+.protfolio {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-background);
+}
+.protfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin-top: 100px;
+}
+.protfolio .col {
+  background-color: white;
+  height: 70vh;
+}
+.protfolio .col h3 {
+  color: #000;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.protfolio .col p {
+  color: #797979;
+  line-height: 1.5;
+  margin: 18px;
+}
+/* ---------------------- End Portfolio ------------------- */
+/* ----------------------- Start About -------------------- */
+.about {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin-top: 100px;
+}
+.about-content .text {
+  margin-top: 25%;
+}
+.about-content .text .hr {
+  background-color: var(--main-color);
+  width: 100%;
+  margin: 18px 0;
+}
+.about-content .text .one {
+  width: 50vw;
+  font-weight: bold;
+  line-height: 2;
+}
+.about-content .text .two {
+  width: 50vw;
+  color: #797979;
+  line-height: 2;
+}
+/* ------------------------ End About --------------------- */
+/* ---------------------- Start contact --------------------- */
+.contact {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-background);
+}
+.contact-content {
+  text-align: center;
+}
+.contact h2 {
+  color: #2c4755;
+  font-weight: bolder;
+  font-size: 30px;
+  margin-top: 20vh;
+}
+.contact h3 a {
+  color: var(--main-color);
+  font-weight: bolder;
+  font-size: 20px;
+  margin-top: 20px;
+  display: block;
+}
+.contact-content p {
+  margin: 15px 0;
+}
+.contact-content .social-icons {
+  margin-bottom: 15px;
+}
+.contact-content .social-icons a:nth-child(1) {
+  color: red;
+}
+.contact-content .social-icons a:nth-child(2) {
+  color: blue;
+}
+.contact-content .social-icons a:nth-child(3) {
+  color: #0f6aed;
+}
+/* ------------------------ End contact --------------------- */
+/* ------------------------ Start Footer -------------------- */
+.footer {
+  background-color: #2c4755;
+  height: 15vh;
+  text-align: center;
+  color: #fff;
+}
+.footer p {
+  padding-top: 5vh;
+}
+.footer p span {
+  color: var(--main-color);
+  font-weight: bold;
+}
+/* ------------------------- End Footer --------------------- */
+/* ------------------------ Start Media --------------------- */
+/*--phones--*/
+@media (max-width: 767px) {
+  header {
+    position: static;
+  }
+  header .icon {
+    display: block;
+  }
+  nav {
+    justify-content: space-between;
+  }
+  nav .nav-links {
+    display: flex;
+    top: 10vh;
+    right: 0;
+    height: 20vh;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-top: 5px solid #0b0a0a;
+  }
+  nav .nav-links li {
+    border-bottom: 2px solid #000;
+    background-color: #f6f6f6;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+  }
+  nav .nav-links li:hover {
+    background-color: #2c2b2b;
+  }
+  nav .nav-links li:hover a {
+    color: var(--main-color);
+    border-bottom: 2px solid #fff;
+  }
+  /* services */
+  .section-heading h1 {
+    font-size: 80px;
+  }
+  .section-heading p {
+    font-size: 16px;
+  }
+  .service-content .srv {
+    display: block;
+    text-align: center;
+  }
+  .service-content .srv i {
+    margin-bottom: 20px;
+    padding-right: 0px;
+  }
+  /* protfolio */
+  .protfolio .col {
+    height: 55vh;
+  }
+  /* About */
+  .about-content {
+    display: block;
+  }
+  .about-content img {
+    width: 100%;
+  }
+  .about-content .text .one {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .about-content .text .two {
+    width: 100%;
+    margin: 0;
+    margin-top: 10px;
+  }
+  /* contact */
+  .contact h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .contact h3 a {
+    font-size: 20px;
+  }
+  /* Footer */
+  .footer {
+    height: 8vh;
+  }
+  .footer p {
+    padding-top: 3vh;
+  }
+}
+/*--Small--*/
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/*--Meduim--*/
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/*--costomized--*/
+@media (max-width: 1199px) {
+  .service-content .col img {
+    display: none;
+  }
+}
+/*--Large--*/
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* ---------------------- End Media ----------------------- */
+/* ---------------- Problems in the template ---------------- 
+>> Navigation
+1- how to add another breakpoint in 992px
+2- the icon need to flip to the other side
+3- The nav bar a is not suitable with the i tag!
+4- on click the icon is not appear in the phone devices with X shape
+
+>> Services
+1- :before element is not working for the images
+
+>> why my responsive phone is not working?!
+
+*/
