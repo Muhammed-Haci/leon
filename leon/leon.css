@@ -167,6 +167,7 @@ header .container nav .toggle_menu span {
   height: 3px;
   width: 25px;
   margin-bottom: 5px;
+  transition: 0.5s;
   background-color: #0b0a0a;
 }
 header .container nav .toggle_menu span:nth-of-type(2) {
