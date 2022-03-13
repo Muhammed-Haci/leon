@@ -127,7 +127,7 @@ a:active {
 /* ---------- End Typography Rules -------------*/
 /* ---------- Start header Section -------------*/
 .services .section-heading, .portfolio .section-heading, .about .section-heading, .contact .section-heading {
-  color: #b0b0b0;
+  color: #c5c5c5;
   font-size: 60px;
   text-align: center;
   letter-spacing: -3px;
@@ -290,6 +290,9 @@ footer {
   text-transform: capitalize;
   color: #fff;
   background-color: #2c4755;
+}
+footer span:first-of-type {
+  color: red;
 }
 footer span:last-of-type {
   font-weight: bold;
