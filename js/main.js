@@ -4,20 +4,23 @@
 
 let toggle_menu = document.querySelector('.toggle_menu');
 let nav = document.querySelector('.nav-items');
-// let line1 = document.querySelector('.line1');
-// let line2 = document.querySelector('.line2');
-// let line3 = document.querySelector('.line3');
+let line1 = document.querySelector('.line1');
+let line2 = document.querySelector('.line2');
+let line3 = document.querySelector('.line3');
 let open = false;
 
 toggle_menu.addEventListener("click", function(){
   if (open === true) {
     nav.style.display = "none";
+    line1.style.cssText = `transform: rotate(0deg) translate(0px)`;
+    line2.style.cssText = `transform: translateX(0px); opacity: 1`;
+    line3.style.cssText = `transform: rotate(0deg) translate(0px)`;
     open = false;
   } else {
     nav.style.display = "block";
-    // line1.style.transform = translateY("8px"), rotate ("45deg");
-    // line1.style.opacity = 0;
-    // line1.style.transform = translateY("-8px"), rotate ("-45deg");
+    line1.style.cssText = `transform: rotate(45deg) translate(6px, 5px); background-color: red; `;
+    line2.style.cssText = `transform: translateX(-15px); opacity: 0`;
+    line3.style.cssText = `transform: rotate(-45deg) translate(6px, -5px); background-color: red; `;
     open = true;
   }
 }); 
